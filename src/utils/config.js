@@ -16,3 +16,5 @@ export function saveConfig(data) {
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(data, null, 2));
   console.log("✅ Config saved to", CONFIG_PATH);
 }
+
+
