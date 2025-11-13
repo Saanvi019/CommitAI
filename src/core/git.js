@@ -19,7 +19,7 @@ export function makeCommit(message) {
   }
 }
 
-// 🧠 NEW: Get a list of changed files (staged only)
+
 export function getChangedFiles() {
   try {
     const files = execSync("git diff --cached --name-only", { encoding: "utf-8" })
