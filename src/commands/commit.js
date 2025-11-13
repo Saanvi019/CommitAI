@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
-import { getStagedDiff, makeCommit } from "../utils/git.js";
-import { generateCommitMessages } from "../utils/ai.js";
+import { getStagedDiff, makeCommit } from "../core/git.js";
+import { generateCommitMessages } from "../core/ai.js";
 
 export async function runCommitCommand(options) {
   console.log(chalk.cyan("🚀 Generating AI-powered commit message..."));

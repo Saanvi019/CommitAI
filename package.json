@@ -1,23 +1,60 @@
 {
-  "name": "commit-ai",
+  "name": "@commitai/cli",
   "version": "1.0.0",
-  "description": "AI-powered commit message generator",
+  "description": "CommitAI — AI-powered conventional commit message generator for developers.",
   "main": "src/index.js",
   "bin": {
     "commitai": "./bin/commitai.js"
   },
   "type": "module",
   "scripts": {
-    "start": "node ./bin/commitai.js"
+    "start": "node ./bin/commitai.js",
+    "dev": "node --watch ./bin/commitai.js",
+    "lint": "eslint ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [
+    "commit",
+    "ai",
+    "cli",
+    "git",
+    "commit-message",
+    "developer-tools",
+    "automation"
+  ],
+  "author": "Rohan Raj",
+  "contributors": [
+    {
+      "name": "Rohan Raj",
+      "email": "your-email@example.com"
+    },
+    {
+      "name": "Saanvi Sharma",
+      "email": "saanvi-email@example.com"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://commitai.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohan2601/commitai-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rohan2601/commitai-cli/issues"
+  },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "chalk": "^5.6.2",
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
-    "inquirer": "^12.11.0"
+    "inquirer": "^12.11.0",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
