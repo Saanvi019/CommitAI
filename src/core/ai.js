@@ -10,7 +10,7 @@ export async function generateCommitMessages(diff) {
   const { token } = readConfig();
 
   if (!token) {
-    console.error("❌ No token found. Please login first:");
+    console.error(" No token found. Please login first:");
     console.error("   commitai login");
     return [{ id: 1, message: "chore: please login first" }];
   }
@@ -24,7 +24,7 @@ export async function generateCommitMessages(diff) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`     // 🔥 REQUIRED
+        "Authorization": `Bearer ${token}`    
       },
       body: JSON.stringify({
         diff,
