@@ -1,8 +1,8 @@
 
+
 import { getChangedFiles } from "./git.js";
 
-const API_URL = "http://localhost:4000/api/generate"; 
-
+const API_URL = "http://localhost:4000/api/generate";
 
 export async function generateCommitMessages(diff) {
   const files = getChangedFiles();
@@ -31,8 +31,7 @@ export async function generateCommitMessages(diff) {
     }));
 
   } catch (err) {
-    console.error("❌ Cannot reach CommitAI backend:", err.message);
+    console.error(" Cannot reach CommitAI backend:", err.message);
     return [{ id: 1, message: "chore: fallback commit message" }];
   }
 }
-
