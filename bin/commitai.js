@@ -9,6 +9,20 @@ program
   .description("AI-powered commit message generator")
   .version("1.0.0");
 
+// -------------------
+// LOGIN COMMAND
+// -------------------
+program
+  .command("login")
+  .description("Login to CommitAI using GitHub")
+  .action(async () => {
+    const module = await import("../src/commands/login.js");
+    module.default();
+  });
+
+// -------------------
+// COMMIT COMMAND
+// -------------------
 program
   .command("commit")
   .description("Generate AI commit messages")

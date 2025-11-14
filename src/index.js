@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 import { execSync } from "child_process";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const args = process.argv.slice(2);
 const command = args[0];
